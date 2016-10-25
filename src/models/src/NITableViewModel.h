@@ -63,7 +63,11 @@ typedef enum {
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
 
 // This method is not appropriate for performance critical codepaths.
+// Returns indexPath of object if [object isEqual:objectInModel]
 - (NSIndexPath *)indexPathForObject:(id)object;
+
+// Returns indexPath of object if (object == objectInModel)
+- (NSIndexPath *)indexPathForObjectIdenticalTo:(id)object;
 
 #pragma mark Configuration
 
